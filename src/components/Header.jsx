@@ -1,10 +1,24 @@
 import React from 'react';
+import { FaReact, FaJs, FaJava, FaPython, FaHtml5, FaCss3 } from 'react-icons/fa';
+import { SiFlutter } from "react-icons/si";
+import "../App.css"
 
 const Header = () => {
   return (
-    <header className="bg-blue-600 text-white p-6 flex flex-col items-center justify-center h-40 mx-20 rounded-b-3xl">
-      <h1 className="text-4xl font-bold mb-2">Quiz Programmation</h1>
-      <p className="text-lg mb-4">Testez vos connaissances en programmation avec notre quiz interactif !</p>
+    <header className="bg-primary text-white p-6 flex flex-col items-center justify-center h-40 mx-20 rounded-b-3xl relative overflow-hidden">
+      <h1 className="text-4xl font-bold mb-2">C'est l'heure du défi ! 🖥️💥</h1>
+      <p className="text-2xl mb-4">Rejoins le défi, teste tes connaissances et deviens un vrai ninja du code ! 🥷🔥</p>
+
+      {/* Icônes de programmation avec animation */}
+      <div className="flex space-x-4 absolute bottom-0 animate-scroll">
+        <FaReact className="text-5xl text-blue-400" />
+        <FaJs className="text-5xl text-yellow-400" />
+        <FaJava className="text-5xl text-red-600" />
+        <FaPython className="text-5xl text-blue-300" />
+        <FaHtml5 className="text-5xl text-orange-500" />
+        <FaCss3 className="text-5xl text-blue-500" />
+        <SiFlutter className="text-5xl text-blue-600" />
+      </div>
     </header>
   );
 };

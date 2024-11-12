@@ -1,10 +1,10 @@
 import React from 'react';
 import Quiz from '../components/Quiz';
-import { htmlQuestions } from '../data/HtmlQuiz';
+import { HTML} from '../data/HtmlQuiz';
 
 function QuizHtml() {
   return (
-  <Quiz questions={htmlQuestions} />
+  <Quiz questions={HTML} />
 );
 }
 

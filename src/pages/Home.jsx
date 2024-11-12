@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';  
 import LanguageSelection from '../components/LanguageSelection';
 
 function Home() {
@@ -12,11 +13,11 @@ function Home() {
     if (storedName) {
       setPlayerName(storedName);
     }
-  }, [playerName])
+  }, [playerName]);
 
   const handleLanguageSelect = (language) => {
     if (playerName.trim() === '') {
-      alert("Entrer un Nom avant de jouer")
+      alert("Entrer un Nom avant de jouer");
       return;
     }
 
@@ -48,11 +49,23 @@ function Home() {
     setShowPopup(false);
   };
 
+  const handlekey = (e) => {
+    if (e.key === 'Enter') {
+      handleStartGame();
+    }
+  }
+
   return (
     <div>
       {/* Popup Modal */}
       {showPopup && (
-        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
+        <motion.div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+          initial={{ y: '-100%' }}  
+          animate={{ y: 0 }}        
+          exit={{ y: '100%' }}      
+          transition={{ duration: 1 }}  
+        >
           <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-lg">
             <h2 className="text-4xl text-black font-bold mb-4 text-center">Bienvenue !</h2>
             <p className="mb-6 text-xl font-semibold text-center">Entrez votre nom pour commencer.</p>
@@ -60,6 +73,7 @@ function Home() {
               type="text"
               value={playerName}
               onChange={handleNameChange}
+              onKeyPress={handlekey}
               placeholder="Nom du joueur"
               className="border p-3 w-full mb-4 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -70,7 +84,7 @@ function Home() {
               Commencer
             </button>
           </div>
-        </div>
+        </motion.div>
       )}
 
       {/* Main content */}

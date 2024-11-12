@@ -1,11 +1,18 @@
 import React from 'react';
+import { motion } from "framer-motion"
 import Html from "../assets/images/formation-html.jpg";
 import Css from "../assets/images/0_GpOUO1n2m49hMkbh.jpg";
 import Javascript from "../assets/images/Unofficial_JavaScript_logo_2.svg.png";
 
 function LanguageSelection({ onSelectLanguage }) {
   return (
-    <div className="flex flex-col mt-8 items-center p-[100px] w-full max-w-7xl mx-auto">
+    <motion.div 
+    className="flex flex-col mt-6 items-center p-[100px] w-full max-w-7xl mx-auto"
+    initial={{ y: '100%' }}  
+    animate={{ y: 0 }}        
+    exit={{ y: '100%' }}      
+    transition={{ duration: 1 }}  
+    >
       <h2 className="text-2xl font-bold mb-6">Sélectionnez un Langage de Programmation ou entre Langage de Balisage ou Style</h2>
       <div className="grid grid-cols-3 gap-6 w-full">
         <button
@@ -30,7 +37,7 @@ function LanguageSelection({ onSelectLanguage }) {
           <div className="relative w-full z-10 bg-black bg-opacity-50 p-2 rounded-md">JAVASCRIPT</div>
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
