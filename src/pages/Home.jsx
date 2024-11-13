@@ -61,10 +61,10 @@ function Home() {
       {showPopup && (
         <motion.div 
           className="fixed inset-0 bg-black bg-opacity-5 flex justify-center items-center z-50 px-4 sm:px-8"
-          initial={{ y: '-100%' }}  
-          animate={{ y: 0 }}        
-          exit={{ y: '100%' }}      
-          transition={{ duration: 1 }}  
+          initial={{ opacity: 0, y: -50 }}  
+          animate={{ opacity: 1, y: 0 }}        
+          exit={{ opacity: 0, y: 50 }}      
+          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }} 
         >
           <div className="bg-[#4CC9FE] p-8 sm:p-10 rounded-tr-2xl rounded-bl-2xl border-[3px] border-[#FFFECB] shadow-lg w-full max-w-md md:max-w-lg lg:max-w-xl">
             <h2 className="text-3xl sm:text-4xl text-black font-bold mb-4 text-center">Bienvenue !</h2>

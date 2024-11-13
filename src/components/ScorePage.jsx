@@ -41,7 +41,7 @@ function ScorePage({ score, totalQuestions, nameplayer, currentLevel }) {
                         onClick={() => navigate("/")} // Retourner à la page d'accueil
                         className="bg-[#09bc8a] text-white py-2 px-4 md:px-6 rounded-full hover:bg-[#227e64] transition duration-300"
                     >
-                        Recommencer le quiz
+                        Retour à l'accueil
                     </button>
                 </div>
             </div>
