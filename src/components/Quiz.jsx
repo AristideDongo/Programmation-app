@@ -55,7 +55,7 @@ function Quiz({ questions }) {
   return (
     <div className="max-w-lg mx-auto p-6 mt-5 bg-slate-200 shadow-lg rounded-lg overflow-auto">
       <h1 className="text-xl text-black mb-4 font-bold">
-        Nom du Joueur: {namePlayer}
+        Joueur: {namePlayer}
       </h1>
       <h1 className="text-2xl font-bold text-black text-center">
         Niveau {level}
