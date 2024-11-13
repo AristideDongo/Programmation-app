@@ -74,7 +74,7 @@ function Home() {
               value={playerName}
               onChange={handleNameChange}
               onKeyPress={handleKeyPress}
-              placeholder="Nom du joueur"
+              placeholder="Ex: Aristide"
               className="border bg-black text-[#FBFBFB] p-3 w-full mb-4 rounded-lg text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-black"
             />
             <button 
