@@ -717,10 +717,10 @@ export const JavaScript = [
     level: "Très Difficile",
     question: "Quel est le résultat de l'expression suivante : `typeof [] === typeof {}` ?",
     answers: [
-      { text: "true", isCorrect: true },
       { text: "false", isCorrect: false },
       { text: "undefined", isCorrect: false },
       { text: "NaN", isCorrect: false },
+      { text: "true", isCorrect: true },
     ],
   },
   {
@@ -728,8 +728,8 @@ export const JavaScript = [
     question: "Qu'est-ce qu'une 'Promise.all()' en JavaScript ?",
     answers: [
       { text: "Elle exécute plusieurs promesses en parallèle, mais retourne une seule promesse.", isCorrect: false },
-      { text: "Elle attend que toutes les promesses d'un tableau soient résolues ou qu'une d'entre elles échoue.", isCorrect: true },
       { text: "Elle exécute plusieurs promesses séquentiellement et retourne une promesse.", isCorrect: false },
+      { text: "Elle attend que toutes les promesses d'un tableau soient résolues ou qu'une d'entre elles échoue.", isCorrect: true },
       { text: "Elle permet d'annuler toutes les promesses en cours.", isCorrect: false },
     ],
   },
@@ -748,8 +748,8 @@ export const JavaScript = [
     question: "Qu'est-ce qu'une 'closure' en JavaScript ?",
     answers: [
       { text: "Une fonction qui empêche la modification de ses variables internes.", isCorrect: false },
-      { text: "Une fonction qui ne peut être appelée qu'une seule fois.", isCorrect: false },
       { text: "Une fonction qui capture et se souvient des variables de son contexte d'exécution.", isCorrect: true },
+      { text: "Une fonction qui ne peut être appelée qu'une seule fois.", isCorrect: false },
       { text: "Une fonction qui crée un nouvel espace de mémoire à chaque appel.", isCorrect: false },
     ],
   },
