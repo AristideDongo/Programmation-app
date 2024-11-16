@@ -826,16 +826,6 @@ export const JavaScript = [
   },
   {
     level: "Expert",
-    question: "Qu'est-ce que le `tail call optimization` en JavaScript ?",
-    answers: [
-      { text: "C'est une technique permettant de réduire le nombre d'appels dans une fonction récursive.", isCorrect: false },
-      { text: "C'est une optimisation qui transforme la récursivité en une boucle.", isCorrect: false },
-      { text: "C'est un moyen d'éviter les erreurs de stack overflow dans les boucles infinies.", isCorrect: false },
-      { text: "C'est une optimisation où l'appel récursif final ne consomme pas de nouvelles ressources mémoire.", isCorrect: true },
-    ],
-  },
-  {
-    level: "Expert",
     question: "Qu'est-ce que `async` et `await` font exactement en JavaScript ?",
     answers: [
       { text: "`async` déclare une fonction asynchrone et `await` permet d'attendre la résolution d'une promesse dans cette fonction.", isCorrect: true },
