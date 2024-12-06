@@ -13,7 +13,6 @@ const Header = () => {
         Rejoins le défi, teste tes connaissances et deviens un vrai ninja du code !
       </p>
 
-      {/* Icônes de programmation avec animation */}
       <div className="flex space-x-2 md:space-x-4 absolute bottom-0 animate-scroll overflow-hidden">
         <FaReact className="text-5xl text-blue-400" />
         <FaJs className="text-5xl text-yellow-400" />

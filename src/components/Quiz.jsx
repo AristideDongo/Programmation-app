@@ -30,9 +30,7 @@ function Quiz({ questions }) {
 
   useEffect(() => {
     setNamePlayer(getPlayerName());
-  }, []);
 
-  useEffect(() => {
     return () => {
       if (timeoutId) {
         clearTimeout(timeoutId);

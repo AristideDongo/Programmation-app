@@ -13,9 +13,8 @@ function ScorePage({ score, totalQuestions, nameplayer, currentLevel }) {
     }, []);
 
     // Calcul de la moyenne
-    const average = totalQuestions / 2; // La moyenne est la moitié du nombre de questions
+    const average = totalQuestions / 2;
 
-    // Message d'encouragement si l'utilisateur est en dessous de la moyenne
     const encouragementMessage = score < average ? (
         <p className="text-lg md:text-xl font-semibold text-[#ff0000] text-center mt-4">
             Ne vous découragez pas, <span className="font-bold">{namePlayer}</span> ! <br />
@@ -38,7 +37,7 @@ function ScorePage({ score, totalQuestions, nameplayer, currentLevel }) {
                 {encouragementMessage}
                 <div className="flex justify-center mt-4 md:mt-6">
                     <button
-                        onClick={() => navigate("/")} // Retourner à la page d'accueil
+                        onClick={() => navigate("/")}
                         className="bg-[#09bc8a] text-white py-2 px-4 md:px-6 rounded-full hover:bg-[#227e64] transition duration-300"
                     >
                         Retour à l'accueil

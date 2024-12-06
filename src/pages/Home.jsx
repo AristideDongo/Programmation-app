@@ -57,7 +57,6 @@ function Home() {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      {/* Popup Modal */}
       {showPopup && (
         <motion.div 
           className="fixed inset-0 bg-black bg-opacity-5 flex justify-center items-center z-50 px-4 sm:px-8"
